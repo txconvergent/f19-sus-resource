@@ -1,14 +1,18 @@
 /* -- Bottom navigation: quick navigation in bottom bar */
 import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
+import FeedComponent from './feed';
+import ListsComponent from './lists';
+import MessagesComponent from './messages';
+import ProfileComponent from './profile';
 
-const FeedRoute = () => <Text>Feed</Text>;
+const FeedRoute = () => <FeedComponent></FeedComponent>;
 
-const ListsRoute = () => <Text>Lists</Text>;
+const ListsRoute = () => <ListsComponent></ListsComponent>;
 
-const MessagesRoute = () => <Text>Messages</Text>;
+const MessagesRoute = () => <MessagesComponent></MessagesComponent>;
 
-const ProfileRoute = () => <Text>Profile</Text>
+const ProfileRoute = () => <ProfileComponent></ProfileComponent>
 
 export default class BottomNavigatonComponent extends React.Component {
   state = {
