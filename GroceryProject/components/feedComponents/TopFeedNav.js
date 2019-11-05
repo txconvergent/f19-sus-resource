@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import TopBarNav from 'top-bar-nav';
-import { Headline } from 'react-native-paper';
  
 const Scene = ({ index }) => (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -29,7 +28,6 @@ export default class TopFeedNav extends React.Component {
                     // routeStack and renderScene are required props
                     routeStack={ROUTESTACK}
                     renderScene={(route, i) => {
-                        // This is a lot like the now deprecated Navigator component
                         let Component = ROUTES[route.title];
                         return <Component index={i} />;
                     }}
@@ -55,7 +53,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff'
     },
     labelStyle: {
-        fontSize: 15,
+        fontSize: 20,
         fontWeight: '500',
         color: '#fff'
     },
