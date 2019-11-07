@@ -49,7 +49,7 @@ export default class TopFeedNav extends React.Component {
 const styles = StyleSheet.create({
     headerStyle: {
         borderBottomWidth: 1,
-        borderColor: '#e6faff',
+        borderColor: '#ffffff',
         backgroundColor: '#ffffff'
     },
     labelStyle: {
