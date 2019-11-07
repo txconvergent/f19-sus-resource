@@ -1,10 +1,16 @@
 /* -- Bottom navigation: quick navigation in bottom bar */
 import * as React from 'react';
-import { BottomNavigation, Text } from 'react-native-paper';
+import { BottomNavigation, Text, Image, List } from 'react-native-paper';
 import FeedComponent from './feed';
 import ListsComponent from './lists';
 import MessagesComponent from './messages';
 import ProfileComponent from './profile';
+import ProfileIcon from './../assets/profile.png';
+import MessagesIcon from './../assets/messages.png';
+import FeedIcon from './../assets/feed.png';
+import ListIcon from './../assets/list.png';
+
+
 
 const FeedRoute = () => <FeedComponent></FeedComponent>;
 
@@ -18,10 +24,10 @@ export default class BottomNavigatonComponent extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: 'feed', title: 'Feed', icon: 'queue-music', color: '#ff6347' },
-      { key: 'lists', title: 'Lists', icon: 'album',  color: '#ffffff' },
-      { key: 'messages', title: 'Messages', icon: 'recent_actors',  color: '#ffffff' },
-      { key: 'profile', title: 'Profile', icon: 'recent_actors',  color: '#ffffff' },
+      { key: 'feed', title: '', icon: FeedIcon, color: '#ffffff' },
+      { key: 'lists', title: '', icon: ListIcon,  color: '#ffffff' },
+      { key: 'messages', title: '', icon: MessagesIcon,  color: '#ffffff' },
+      { key: 'profile', title: '', icon: ProfileIcon,  color: '#ffffff' },
     ],
   };
 
@@ -40,6 +46,8 @@ export default class BottomNavigatonComponent extends React.Component {
         navigationState={this.state}
         onIndexChange={this._handleIndexChange}
         renderScene={this._renderScene}
+        activeColor='#7dcf85'
+        inactiveColor='#828282'
       />
     );
   }
