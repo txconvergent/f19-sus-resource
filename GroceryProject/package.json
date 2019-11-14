@@ -20,12 +20,17 @@
     "react-icons": "^3.8.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
     "react-native-auth0": "^2.1.0",
+<<<<<<< HEAD
     "react-native-config": "^0.11.7",
     "react-native-gesture-handler": "^1.5.0",
     "react-native-gifted-chat": "^0.11.3",
     "react-native-modal": "^11.5.3",
     "react-native-paper": "^3.1.1",
     "react-native-svg": "^9.13.3",
+=======
+    "react-native-gifted-chat": "^0.11.3",
+    "react-native-paper": "^3.2.1",
+>>>>>>> 7be191bbadd78c82df714db2951dad45a8b3c08f
     "react-native-svg-uri": "^1.2.3",
     "react-native-web": "^0.11.7",
     "stream-chat": "^1.1.7",
