@@ -1,29 +1,39 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import TopBarNav from 'top-bar-nav';
+import ExchangesComponent from './exchanges.js';
  
 const Scene = ({ index }) => (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ fontSize: 20 }}>{index}</Text>
     </View>
 );
+
+const Scene2 = ({ index }) => (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 200 }}>{index}</Text>
+    </View>
+);
  
 const ROUTES = {
-    Scene
+    Scene,
+    Scene2,
+    ExchangesComponent
     // ideally you would have a ROUTES object with multiple React component scenes
 };
  
 // There are three types of labels (image, text, and element)
 const ROUTESTACK = [
-    { text: 'All', title: 'Scene' }, // title is just the name of the Component being rendered.  See the renderScene property below
-    { text: 'Shops', title: 'Scene' },
-    { text: 'Exchanges', title: 'Scene'}
+    { text: 'All', title: 'Scene'}, // title is just the name of the Component being rendered.  See the renderScene property below
+    { text: 'Shops', title: 'Scene2' },
+    { text: 'Exchanges', title: 'ExchangesComponent'}
 ];
  
 export default class TopFeedNav extends React.Component {
     render() {
         return (
           <View style={{ flex: 1 }}>
+              <Image source={require('./../../assets/FAB.png')} style={{width: 56, height: 56, position: "absolute", bottom: 16, right: 16}}></Image>
                 <TopBarNav
                     // routeStack and renderScene are required props
                     routeStack={ROUTESTACK}
