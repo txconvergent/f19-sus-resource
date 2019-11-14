@@ -2,30 +2,20 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import TopBarNav from 'top-bar-nav';
 import ExchangesComponent from './exchanges.js';
- 
-const Scene = ({ index }) => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 20 }}>{index}</Text>
-    </View>
-);
-
-const Scene2 = ({ index }) => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 200 }}>{index}</Text>
-    </View>
-);
+import AllComponent from './all.js';
+import ShopsComponent from './shops.js';
  
 const ROUTES = {
-    Scene,
-    Scene2,
+    AllComponent,
+    ShopsComponent,
     ExchangesComponent
     // ideally you would have a ROUTES object with multiple React component scenes
 };
  
 // There are three types of labels (image, text, and element)
 const ROUTESTACK = [
-    { text: 'All', title: 'Scene'}, // title is just the name of the Component being rendered.  See the renderScene property below
-    { text: 'Shops', title: 'Scene2' },
+    { text: 'All', title: 'AllComponent'}, // title is just the name of the Component being rendered.  See the renderScene property below
+    { text: 'Shops', title: 'ShopsComponent' },
     { text: 'Exchanges', title: 'ExchangesComponent'}
 ];
  
