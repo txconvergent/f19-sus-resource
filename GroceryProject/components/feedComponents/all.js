@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 import {Card, Button, ListItem, Icon} from 'react-native-elements'
-
+import ShopsTopNav from './shopsTopNav.js';
 
 export default class AllComponent extends React.Component {
     render() {
