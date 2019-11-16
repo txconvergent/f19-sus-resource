@@ -24,8 +24,8 @@ export default class BottomNavigatonComponent extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: 'feed', title: '', icon: FeedIcon, color: '#ffffff' },
-      { key: 'lists', title: '', icon: ListIcon,  color: '#ffffff' },
+      { key: 'feed', title: 'feed', icon: FeedIcon, color: '#ffffff' },
+      { key: 'lists', title: 'lists', icon: ListIcon,  color: '#ffffff' },
       { key: 'messages', title: '', icon: MessagesIcon,  color: '#ffffff' },
       { key: 'profile', title: '', icon: ProfileIcon,  color: '#ffffff' },
     ],
