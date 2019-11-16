@@ -94,7 +94,7 @@ export default class Message extends React.Component {
 
     let extraStyle;
 
-    {/*if (
+    if (
 
       isSameUser(this.props.currentMessage, this.props.previousMessage)
 
@@ -106,7 +106,7 @@ export default class Message extends React.Component {
 
       extraStyle = { height: 0 };
 
-    }*/}
+    }
 
 
 
@@ -192,9 +192,9 @@ const styles = StyleSheet.create({
 
     // The bottom should roughly line up with the first line of message text.
 
-    height: 100,
+    height: 40,
 
-    width: 100,
+    width: 40,
 
     borderRadius: 3,
 
