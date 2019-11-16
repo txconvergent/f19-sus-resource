@@ -13,7 +13,7 @@ export default class ShopsComponent extends React.Component {
               <Text style={{marginBottom: 10, color: 'gray'}}>Hancock Center</Text>
               <Button
                 icon={<Icon name="add" color='#ffffff' />}
-                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0,  backgroundColor: '#7dcf85'}}
                 title='Join This Group'
                 />
             </Card>

@@ -13,7 +13,7 @@ export default class ExchangesComponent extends React.Component {
               <Text style={{marginBottom: 10, color: 'gray'}}>Skyloft Lobby</Text>
               <Button
                 icon={<Icon name='message' color='#ffffff' />}
-                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0,  backgroundColor: '#7dcf85'}}
                 title='Message' />
             </Card>
           </ScrollView>);
