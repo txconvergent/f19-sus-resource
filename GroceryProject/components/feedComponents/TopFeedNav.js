@@ -23,7 +23,7 @@ export default class TopFeedNav extends React.Component {
     render() {
         return (
           <View style={{ flex: 1 }}>
-              <Image source={require('./../../assets/FAB.png')} style={{width: 56, height: 56, position: "absolute", bottom: 16, right: 16, zIndex: 999}}></Image>
+              <Image source={require('./../../assets/plusFAB.png')} style={{width: 56, height: 56, position: "absolute", bottom: 16, right: 16, zIndex: 999}}></Image>
                 <TopBarNav
                     // routeStack and renderScene are required props
                     routeStack={ROUTESTACK}
