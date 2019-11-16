@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, ScrollView, Modal, TouchableOpacity } from 'react-native';
 import {Card, Button, ListItem, Icon} from 'react-native-elements'
 import ShopsTopNav from './shopsTopNav.js';
+import Messages from './../messages.js';
 
 export default class AllComponent extends React.Component {
   state = {
@@ -41,7 +42,9 @@ export default class AllComponent extends React.Component {
               <Button
                 icon={<Icon name='message' color='#ffffff' />}
                 buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0,  backgroundColor: '#7dcf85'}}
-                title='Message' />
+                title='Message' 
+                onPress={()=>{this.setState({currentPage: "newMessage"})}}
+                />
             </Card>
           </ScrollView>);
       }
@@ -52,6 +55,15 @@ export default class AllComponent extends React.Component {
         <Image source={require('./../../assets/Close.png')}></Image>
         </TouchableOpacity>
         <ShopsTopNav></ShopsTopNav>
+        </Modal>;
+      }
+      if(this.state.currentPage == "newMessage") {
+        return <Modal>
+          <TouchableOpacity onPress={()=>{this.setState({currentPage: "mainFeed"})}} 
+          style={{width: 33, height: 33, position: "absolute", top: 20, right: 16, zIndex: 999}}>
+        <Image source={require('./../../assets/Close.png')}></Image>
+        </TouchableOpacity>
+        <Messages></Messages>
         </Modal>;
       }
     }

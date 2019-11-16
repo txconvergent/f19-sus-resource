@@ -42,7 +42,7 @@ export default class App extends React.Component {
 
             _id: 2,
 
-            name: 'React Native',
+            name: 'John',
 
             avatar: 'https://placeimg.com/140/140/any',
 
