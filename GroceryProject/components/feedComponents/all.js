@@ -51,7 +51,7 @@ export default class AllComponent extends React.Component {
       if(this.state.currentPage == "joinGroup") {
         return <Modal>
           <TouchableOpacity onPress={()=>{this.setState({currentPage: "mainFeed"})}} 
-          style={{width: 33, height: 33, position: "absolute", top: 20, right: 16, zIndex: 999}}>
+          style={{width: 33, height: 33, position: "absolute", top: 45, right: 16, zIndex: 999}}>
         <Image source={require('./../../assets/Close.png')}></Image>
         </TouchableOpacity>
         <ShopsTopNav></ShopsTopNav>
@@ -60,7 +60,7 @@ export default class AllComponent extends React.Component {
       if(this.state.currentPage == "newMessage") {
         return <Modal>
           <TouchableOpacity onPress={()=>{this.setState({currentPage: "mainFeed"})}} 
-          style={{width: 33, height: 33, position: "absolute", top: 20, right: 16, zIndex: 999}}>
+          style={{width: 33, height: 33, position: "absolute", top: 45, right: 16, zIndex: 999}}>
         <Image source={require('./../../assets/Close.png')}></Image>
         </TouchableOpacity>
         <Messages></Messages>

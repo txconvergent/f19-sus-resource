@@ -34,7 +34,7 @@ export default class App extends React.Component {
 
           _id: 1,
 
-          text: 'Hello developer',
+          text: 'Who is ready to go shopping?',
 
           createdAt: new Date(),
 

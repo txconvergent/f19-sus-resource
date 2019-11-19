@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import TopBarNav from 'top-bar-nav';
+import Messages from './../messages.js';
  
 const Scene = ({ index }) => (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -9,21 +10,25 @@ const Scene = ({ index }) => (
 );
  
 const ROUTES = {
+    Messages,
     Scene
     // ideally you would have a ROUTES object with multiple React component scenes
 };
  
-// There are three types of labels (image, text, and element)
 const ROUTESTACK = [
-    { image: require('./../../assets/heb.png'), title: 'Scene' },
-    { text: 'Hello', title: 'Scene' }, // title is just the name of the Component being rendered.  See the renderScene property below
-    { element: <Text>World</Text>, title: 'Scene' }
+    { text: 'Chat', title: 'Messages' },
+    { text: 'List', title: 'Scene' }, // title is just the name of the Component being rendered.  See the renderScene property below
+    { text: 'People', title: 'Scene' }
 ];
  
 export default class ShopsTopNav extends React.Component {
+
     render() {
         return (
             <View style={{ flex: 1 }}>
+            <Text style={{fontSize: 30, fontWeight: "bold", marginBottom: 0, paddingTop: 45, paddingLeft: 30}}>HEB Run!</Text>
+            <Text style={{marginBottom: 0, paddingLeft: 30, fontSize: 20}}>5:30pm</Text> 
+            <Text style={{marginBottom: 0, paddingLeft: 30, fontSize: 20}}>Hancock Center</Text> 
                 <TopBarNav
                     // routeStack and renderScene are required props
                     routeStack={ROUTESTACK}
@@ -33,7 +38,7 @@ export default class ShopsTopNav extends React.Component {
                         return <Component index={i} />;
                     }}
                     // Below are optional props
-                    headerStyle={[styles.headerStyle, { paddingTop: 30 }]} // probably want to add paddingTop if using TopBarNav for the  entire height of screen to account for notches/status bars
+                    headerStyle={[styles.headerStyle, { paddingTop: 50 }]} // probably want to add paddingTop if using TopBarNav for the  entire height of screen to account for notches/status bars
                     labelStyle={styles.labelStyle}
                     underlineStyle={styles.underlineStyle}
                     imageStyle={styles.imageStyle}
@@ -50,8 +55,8 @@ export default class ShopsTopNav extends React.Component {
 const styles = StyleSheet.create({
     headerStyle: {
         borderBottomWidth: 1,
-        borderColor: '#e6faff',
-        backgroundColor: '#3385ff'
+        borderColor: '#ffffff',
+        backgroundColor: '#ffffff'
     },
     labelStyle: {
         fontSize: 15,
@@ -65,7 +70,7 @@ const styles = StyleSheet.create({
     },
     underlineStyle: {
         height: 3.6,
-        backgroundColor: '#e6faff',
+        backgroundColor: '#7dcf85',
         width: 40
     }
 });
