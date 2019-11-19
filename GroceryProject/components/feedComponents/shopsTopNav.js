@@ -2,23 +2,20 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import TopBarNav from 'top-bar-nav';
 import Messages from './../messages.js';
- 
-const Scene = ({ index }) => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 20 }}>{index}</Text>
-    </View>
-);
+import ShopList from './shopList.js';
+import ShopPeople from './shopPeople.js';
  
 const ROUTES = {
     Messages,
-    Scene
+    ShopList,
+    ShopPeople
     // ideally you would have a ROUTES object with multiple React component scenes
 };
  
 const ROUTESTACK = [
     { text: 'Chat', title: 'Messages' },
-    { text: 'List', title: 'Scene' }, // title is just the name of the Component being rendered.  See the renderScene property below
-    { text: 'People', title: 'Scene' }
+    { text: 'List', title: 'ShopList' }, // title is just the name of the Component being rendered.  See the renderScene property below
+    { text: 'People', title: 'ShopPeople' }
 ];
  
 export default class ShopsTopNav extends React.Component {
