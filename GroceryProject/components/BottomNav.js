@@ -3,7 +3,7 @@ import * as React from 'react';
 import { BottomNavigation, Text, Image, List } from 'react-native-paper';
 import FeedComponent from './feed';
 import ListsComponent from './lists';
-import MessagesComponent from './messages';
+import MessagesComponent from './messagesHome';
 import ProfileComponent from './profile';
 import ProfileIcon from './../assets/profile.png';
 import MessagesIcon from './../assets/messages.png';

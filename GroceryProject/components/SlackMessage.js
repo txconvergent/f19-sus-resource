@@ -94,7 +94,7 @@ export default class Message extends React.Component {
 
     let extraStyle;
 
-    if (
+    {/*if (
 
       isSameUser(this.props.currentMessage, this.props.previousMessage)
 
@@ -106,7 +106,7 @@ export default class Message extends React.Component {
 
       extraStyle = { height: 0 };
 
-    }
+    }*/}
 
 
 
