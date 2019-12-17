@@ -3,6 +3,7 @@ import { View, Text, Image, ScrollView, Modal, TouchableOpacity } from 'react-na
 import {Card, Button, ListItem, Icon} from 'react-native-elements'
 import ShopsTopNav from './shopsTopNav.js';
 import Messages from './../messages.js';
+import Messages2 from './../messages2.js';
 
 export default class AllComponent extends React.Component {
   state = {
@@ -36,7 +37,7 @@ export default class AllComponent extends React.Component {
             <Card>
               <Text style={{fontSize: 20, fontWeight: "bold", marginBottom: 0}}>4 Bananas</Text>
               <Text style={{marginBottom: 0}}>
-                8:30pm | David Y. | Free
+                8:30pm | John P. | Free
               </Text>
               <Text style={{marginBottom: 10, color: 'gray'}}>Skyloft Lobby</Text>
               <Button
@@ -54,7 +55,7 @@ export default class AllComponent extends React.Component {
           style={{width: 33, height: 33, position: "absolute", top: 45, right: 16, zIndex: 999}}>
         <Image source={require('./../../assets/Close.png')}></Image>
         </TouchableOpacity>
-        <ShopsTopNav></ShopsTopNav>
+        <ShopsTopNav title={this.state.title} location={this.state.location} name={this.state.name} time={this.state.time} currentPage={this.state.currentPage}></ShopsTopNav>
         </Modal>;
       }
       if(this.state.currentPage == "newMessage") {
@@ -63,7 +64,7 @@ export default class AllComponent extends React.Component {
           style={{width: 33, height: 33, position: "absolute", top: 45, right: 16, zIndex: 999}}>
         <Image source={require('./../../assets/Close.png')}></Image>
         </TouchableOpacity>
-        <Messages></Messages>
+        <Messages2></Messages2>
         </Modal>;
       }
     }

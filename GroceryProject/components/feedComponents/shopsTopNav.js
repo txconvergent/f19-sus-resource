@@ -19,13 +19,22 @@ const ROUTESTACK = [
 ];
  
 export default class ShopsTopNav extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: this.props.title,
+            location: this.props.location,
+            name: this.props.name,
+            time: this.props.time,
+            currentPage: this.props.currentPage
+        }
+    }
     render() {
         return (
             <View style={{ flex: 1 }}>
-            <Text style={{fontSize: 30, fontWeight: "bold", marginBottom: 0, paddingTop: 45, paddingLeft: 30}}>HEB Run!</Text>
-            <Text style={{marginBottom: 0, paddingLeft: 30, fontSize: 20}}>5:30pm</Text> 
-            <Text style={{marginBottom: 0, paddingLeft: 30, fontSize: 20}}>Hancock Center</Text> 
+    <Text style={{fontSize: 30, fontWeight: "bold", marginBottom: 0, paddingTop: 45, paddingLeft: 30}}>{this.state.title}</Text>
+        <Text style={{marginBottom: 0, paddingLeft: 30, fontSize: 20}}>{this.state.time}</Text> 
+            <Text style={{marginBottom: 0, paddingLeft: 30, fontSize: 20}}>{this.state.location}</Text> 
                 <TopBarNav
                     // routeStack and renderScene are required props
                     routeStack={ROUTESTACK}

@@ -20,7 +20,12 @@ const ROUTESTACK = [
 ];
  
 export default class TopFeedNav extends React.Component {
+    state = {
+        currentPage: "mainPage"
+    }
+
     render() {
+        if(this.state.currentPage == "mainPage") {
         return (
           <View style={{ flex: 1 }}>
               <Image source={require('./../../assets/plusFAB.png')} style={{width: 56, height: 56, position: "absolute", bottom: 16, right: 16, zIndex: 999}}></Image>
@@ -41,7 +46,7 @@ export default class TopFeedNav extends React.Component {
                     fadeLabels={true}
                 />
            </View>
-        );
+        );}
     }
  
 }
